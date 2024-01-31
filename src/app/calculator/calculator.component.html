@@ -1,0 +1,38 @@
+<div>
+    <app-navbar></app-navbar>
+<div class="min-h-screen flex justify-center items-center bg-indigo-500">
+    <div class="col-span-4 md:col-span-3 bg-gray-900 p-8 rounded-lg shadow-xl">
+      <h1 class="text-center text-white text-3xl mb-4">Basic Calculator</h1>
+      <div class="mb-4">
+        <input id="display" class="w-full bg-gray-200 text-right text-3xl py-2 px-4 rounded-lg outline-none" [(ngModel)]="input" disabled>
+      </div>
+      <div class="mb-4">
+        <input id="result" class="w-full bg-gray-200 text-right text-lg py-1 px-3 rounded-lg outline-none" [(ngModel)]="result" disabled>
+      </div>
+      <div class="grid grid-cols-3 gap-4 mb-4">
+        <button class="col-span-1 bg-blue-500 text-white text-2xl py-2 rounded-lg" (click)="allClear()">C</button>
+        <button class="col-span-1 bg-yellow-500 text-white text-2xl py-2 rounded-lg" (click)="clear()">x</button>
+        <button class="col-span-1 bg-gray-500 text-white text-2xl py-2 rounded-lg" (click)="pressOperator('/')">/</button>
+      </div>
+      <div class="grid grid-cols-4 gap-4 mb-4">
+        <button class="bg-gray-200 text-gray-800 text-2xl py-2 rounded-lg" (click)="pressNum('7')">7</button>
+        <button class="bg-gray-200 text-gray-800 text-2xl py-2 rounded-lg" (click)="pressNum('8')">8</button>
+        <button class="bg-gray-200 text-gray-800 text-2xl py-2 rounded-lg" (click)="pressNum('9')">9</button>
+        <button class="bg-gray-500 text-white text-2xl py-2 rounded-lg" (click)="pressOperator('*')">X</button>
+        <button class="bg-gray-200 text-gray-800 text-2xl py-2 rounded-lg" (click)="pressNum('4')">4</button>
+        <button class="bg-gray-200 text-gray-800 text-2xl py-2 rounded-lg" (click)="pressNum('5')">5</button>
+        <button class="bg-gray-200 text-gray-800 text-2xl py-2 rounded-lg" (click)="pressNum('6')">6</button>
+        <button class="bg-gray-500 text-white text-2xl py-2 rounded-lg" (click)="pressOperator('-')">-</button>
+        <button class="bg-gray-200 text-gray-800 text-2xl py-2 rounded-lg" (click)="pressNum('1')">1</button>
+        <button class="bg-gray-200 text-gray-800 text-2xl py-2 rounded-lg" (click)="pressNum('2')">2</button>
+        <button class="bg-gray-200 text-gray-800 text-2xl py-2 rounded-lg" (click)="pressNum('3')">3</button>
+        <button class="bg-gray-500 text-white text-2xl py-2 rounded-lg" (click)="pressOperator('+')">+</button>
+        <button class="col-span-2 bg-gray-200 text-gray-800 text-2xl py-2 rounded-lg" (click)="pressNum('0')">0</button>
+        <button class="bg-gray-200 text-gray-800 text-2xl py-2 rounded-lg" (click)="pressNum('.')">.</button>
+      </div>
+      <div class="flex justify-end">
+        <button class="bg-green-500 text-white text-2xl py-2 px-6 rounded-lg" (click)="getAnswer()">=</button>
+      </div>
+    </div>
+  </div>
+</div>
